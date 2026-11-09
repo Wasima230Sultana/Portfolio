@@ -11,7 +11,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Repo shape
 
 - Single Next.js 16.4.5 app, npm only (`package-lock.json`), no workspaces. App Router source is in `src/app`; path alias `@/*` → `./src/*`.
-- README is stock create-next-app boilerplate and partly stale: it says edit `app/page.tsx`, but the real entry is `src/app/page.tsx`.
+- README is maintained by hand (not boilerplate) — keep it in sync when commands, structure, or theming change.
 
 ## Commands
 

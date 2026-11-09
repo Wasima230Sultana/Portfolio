@@ -290,6 +290,8 @@ export default function EducationContact() {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+    rel="noopener noreferrer"
                     aria-label={social.label}
                     className="grid h-11 w-11 place-items-center rounded-full border border-edge bg-foreground/[0.05] text-muted transition hover:-translate-y-0.5 hover:border-violet-400/50 hover:text-violet-500 dark:hover:text-violet-400"
                   >

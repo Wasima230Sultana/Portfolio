@@ -165,30 +165,7 @@ export default function About() {
 </h2>
           {/* Auto-scrolling slider: the track holds the list twice so the
               -50% keyframe loops seamlessly. Second copy is hidden from AT. */}
-          {/* <div className="skills-marquee mt-7 overflow-hidden">
-            <div className="skills-track">
-              {[0, 1].map((copy) => (
-                <ul key={copy} className="flex" aria-hidden={copy === 1 ? "true" : undefined}>
-                  {skills.map(({ name, color, light, Icon, Second }) => (
-                    <li
-                      key={`${copy}-${name}`}
-                      className="group mr-3 flex w-[104px] shrink-0 flex-col items-center gap-2.5 rounded-xl border border-edge bg-foreground/[0.04] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/50 hover:bg-violet-500/10 sm:mr-4 lg:w-[116px] lg:p-4">
-                      <span
-                        className="skill-logo flex h-11 w-11 items-center justify-center"
-                        style={{ "--skill-color": color, "--skill-color-light": light ?? color } as React.CSSProperties}
-                      >
-                        <Icon className="h-9 w-9 transition-transform group-hover:scale-110" />
-                        {Second && <Second className="-ml-3 h-6 w-6 opacity-90 transition-transform group-hover:scale-110" />}
-                      </span>
-                      <span className="whitespace-nowrap text-center text-xs font-medium text-muted">
-                        {name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ))}
-            </div>
-          </div> */}
+          
           
 
 

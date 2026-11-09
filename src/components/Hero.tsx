@@ -35,13 +35,6 @@ function LinkedinIcon() {
   );
 }
 
-function XIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-[18px] w-[18px]" aria-hidden="true">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
 
 function SparkleIcon({ className }: { className?: string }) {
   return (
@@ -54,7 +47,6 @@ function SparkleIcon({ className }: { className?: string }) {
 const socials = [
   { label: "GitHub", href: "https://github.com/Wasima230Sultana", icon: <GithubIcon /> },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/wasima-sultana", icon: <LinkedinIcon /> },
-  { label: "X", href: "#", icon: <XIcon /> },
 ];
 
 export default function Hero() {
@@ -145,6 +137,8 @@ export default function Hero() {
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
                 className="grid h-11 w-11 place-items-center rounded-full border border-edge bg-foreground/[0.05] text-muted transition hover:-translate-y-0.5 hover:border-violet-500 hover:text-violet-600 dark:border-white/15 dark:bg-white/5 dark:text-white/80 dark:hover:border-violet-400 dark:hover:text-white"
               >

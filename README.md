@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Wasima Sultana — Personal Portfolio
 
-## Getting Started
+A modern, responsive personal portfolio built with Next.js and TypeScript, featuring a dark-purple aesthetic, light/dark theme switching, and smooth navigation. Showcases my skills, projects, education, and experience as a Frontend Developer.
 
-First, run the development server:
+## 🌐 Live Portfolio
+
+[Visit My Portfolio](https://portfolio-wasima230sultana.vercel.app/)
+
+## ✨ Features
+
+- **Theme Switching:** Dark and light modes with saved preferences.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+- **Hero Section:** Personal introduction, profile image, social links, and call-to-action buttons.
+- **About & Skills:** Introduction and animated skills marquee featuring 15 technology icons.
+- **Featured Projects:** Showcases Kindora, ShadowPrep, and Bazar Dor with project links.
+- **Education & Experience:** Timeline highlighting academic and professional background.
+- **Contact Section:** Easy communication through email.
+- **Download Resume:** Direct access to my resume.
+- **Smooth Navigation:** Fixed navbar, scroll-spy, and mobile menu.
+- **Accessibility:** Supports reduced-motion preferences.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 16, React 19
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Fonts:** Geist, Geist Mono, Caveat
+- **Icons:** Custom inline SVG
+- **Deployment:** Vercel
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+└── components/
+    ├── Navbar.tsx
+    ├── Hero.tsx
+    ├── About.tsx
+    ├── skill-icons.tsx
+    ├── FeaturedProjects.tsx
+    ├── EducationContact.tsx
+    └── Footer.tsx
+
+public/
+└── images/
+    └── Portfolio and project images
+```
+
+## ⚙️ Getting Started
+
+**Prerequisites:** Node.js 20.9+ and npm.
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Wasima230Sultana/Portfolio
+cd Portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📜 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npx tsc --noEmit` | Check TypeScript types |
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The portfolio can be deployed easily using [Vercel](https://vercel.com/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👩‍💻 About Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Wasima Sultana**  
+Frontend Developer | CSE Student
 
-## Deploy on Vercel
+Interested in Frontend Development, MERN Stack, Software Development, and Artificial Intelligence.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **GitHub:** [wasima230sultana](https://github.com/wasima230sultana)
+- **LinkedIn:** [Wasima Sultana](https://www.linkedin.com/in/wasima-sultana)
+- **Email:** wasimasultana230@gmail.com
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+⭐ If you like this project, consider giving it a star!
