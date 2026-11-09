@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Theme is attribute-based: <html data-theme="dark|light">, set server-side and
+   corrected before first paint by the inline script in layout.tsx. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+[data-theme="light"] {
+  --page-bg: #ffffff;
+  --page-fg: #171717;
+  --page-muted: #52525b;
+  --panel-bg: rgba(255, 255, 255, 0.82);
+  --edge: rgba(23, 23, 23, 0.1);
+}
+
+[data-theme="dark"] {
+  --page-bg: #0a0a12;
+  --page-fg: #f4f4f5;
+  --page-muted: #a1a1aa;
+  --panel-bg: rgba(10, 10, 18, 0.75);
+  --edge: rgba(255, 255, 255, 0.12);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--page-bg);
+  --color-foreground: var(--page-fg);
+  --color-muted: var(--page-muted);
+  --color-panel: var(--panel-bg);
+  --color-edge: var(--edge);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-hand: var(--font-caveat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page-bg);
+  color: var(--page-fg);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Skill logos are brand-colored; a few are white and need a dark
+   counterpart on light backgrounds. Set per-item via CSS variables. */
+[data-theme="dark"] .skill-logo {
+  color: var(--skill-color);
+}
+
+[data-theme="light"] .skill-logo {
+  color: var(--skill-color-light);
+}
+
+/* Gentle bob for the hero portrait. */
+@keyframes float-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-bob {
+    animation: float-bob 6s ease-in-out infinite;
+  }
+}
+
+/* Infinite horizontal slider for the My Skills tiles. The track holds the list
+   twice, so shifting it by -50% lands exactly on the start of the second copy —
+   a seamless loop. Duration scales with content length. */
+@keyframes skills-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: skills-marquee 34s linear infinite;
+}
+
+/* Pause on hover so a label can be read. */
+.skills-marquee:hover .skills-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-track {
+    animation: none;
+  }
+}
+
+/* Fade the slider edges so tiles don't cut off abruptly. */
+.skills-marquee {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
 }
