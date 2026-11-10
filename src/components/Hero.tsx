@@ -181,7 +181,7 @@ export default function Hero() {
               className="absolute -inset-[3px] rounded-full bg-gradient-to-br from-violet-400/70 via-fuchsia-500/40 to-violet-600/60 shadow-[0_30px_70px_-20px_rgba(124,58,237,0.75)]"
             />
             <Image
-              src="/images/me.png"
+              src="/images/1.png"
               alt="Portrait of Wasima Sultana"
               fill
               sizes="(max-width: 1024px) 78vw, 400px"
